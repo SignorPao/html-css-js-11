@@ -1,0 +1,68 @@
+@import url(/assets/css/reset.css);
+
+/* 
+==============================
+  VARIABLES
+==============================
+*/
+:root {
+  /* Colors */
+  --white: rgb(255, 255, 255);
+  --dark-hard: rgb(20, 25, 31);
+  --dark-medium: rgb(29, 35, 42);
+  --gray: rgb(224, 224, 224);
+  --yellow: rgb(214, 161, 0);
+  /* Fonts & Typography */
+  --title: "League Spartan", Arial, Helvetica, sans-serif;
+  --text: "Roboto", Arial, Helvetica, sans-serif;
+  /* Length values */
+  /* Other values */
+}
+
+/* 
+==============================
+  BASE
+==============================
+*/
+body {
+  font-family: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title);
+}
+
+/* 
+==============================
+  REUSABLE CLASSES
+==============================
+*/
+
+/* 
+==============================
+  HEADER
+==============================
+*/
+
+/* 
+==============================
+  MAIN
+==============================
+*/
+
+/* 
+==============================
+  FOOTER
+==============================
+*/
+
+/* 
+==============================
+  BREAKPOINTS
+==============================
+*/
