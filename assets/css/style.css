@@ -9,14 +9,19 @@
   /* Colors */
   --white: rgb(255, 255, 255);
   --dark-hard: rgb(20, 25, 31);
+  --dark-hover: rgb(39, 49, 61);
   --dark-medium: rgb(29, 35, 42);
+  --dark-light: rgb(52, 63, 75);
   --gray: rgb(224, 224, 224);
   --yellow: rgb(214, 161, 0);
   /* Fonts & Typography */
   --title: "League Spartan", Arial, Helvetica, sans-serif;
   --text: "Roboto", Arial, Helvetica, sans-serif;
   /* Length values */
+  --max-width: 1300px;
+  --padding-inline: 12px;
   /* Other values */
+  --transition: 250ms ease;
 }
 
 /* 
@@ -26,6 +31,9 @@
 */
 body {
   font-family: var(--text);
+  font-size: 100%;
+  color: var(--white);
+  background-color: var(--dark-medium);
 }
 
 h1,
@@ -42,18 +50,158 @@ h6 {
   REUSABLE CLASSES
 ==============================
 */
+.wrapper {
+  padding-inline: var(--padding-inline);
+  margin-inline: auto;
+  max-width: min(100%, var(--max-width));
+}
 
 /* 
 ==============================
   HEADER
 ==============================
 */
+.header {
+  font-size: 0.9rem;
+}
+
+/* topbar */
+.topbar {
+  height: 48px;
+  background-color: var(--dark-hard);
+}
+
+.topbar__container {
+  height: 100%;
+  max-width: min(100%, var(--max-width));
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.topbar__change-country {
+  padding-inline: var(--padding-inline);
+  height: 100%;
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color var(--transition);
+}
+
+.topbar__change-country:hover {
+  background-color: var(--dark-hover);
+}
+
+.globe__icon {
+}
+
+.topbar__text {
+}
+/* end topbar */
+
+/* header nav */
+.navigation {
+  /* overflow: hidden; */
+  height: fit-content;
+}
+
+.navigation__container {
+  height: 64px;
+  border-block-end: 0.5px solid var(--dark-light);
+}
+
+.navigation__container > .navigation__wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+}
+
+.nav__list {
+  display: none;
+}
+
+.nav__buttons {
+  height: 100%;
+  width: 130px;
+  padding-inline: var(--padding-inline);
+  display: flex;
+  align-items: center;
+}
+
+.nav__buttons-search {
+  width: 50%;
+}
+
+.nav__buttons-menu {
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.bar-1,
+.bar-2 {
+  width: 20px;
+  height: 1.6px;
+  background-color: var(--white);
+  transition: all var(--transition);
+}
+
+.mobile__navigation-container{
+  transform: translateY(-200%);
+  /* overflow: hidden; */
+}
+
+.mobile__navigation-container.active ul{}
+
+.mobile__navigation-container ul li {
+  border-block-end: 0.5px solid var(--dark-light);
+}
+
+.mobile__navigation-container ul li:first-child {
+  border-inline-start: 4px solid var(--yellow);
+}
+
+.mobile__navigation-container ul li:first-child a {
+  padding-inline-start: calc((var(--padding-inline) * 2) - 4px);
+}
+
+.mobile__navigation-container ul li a {
+  width: 100%;
+  padding-inline: calc(var(--padding-inline) * 2);
+  padding-block: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color var(--transition);
+}
+
+.mobile__navigation-container ul li a:hover {
+  background-color: var(--dark-hover);
+}
+/* end header nav */
 
 /* 
 ==============================
   MAIN
 ==============================
 */
+.main {
+  width: 100%;
+  height: 1000px;
+  background-color: rgb(45, 52, 58);
+  padding: 1rem;
+}
 
 /* 
 ==============================

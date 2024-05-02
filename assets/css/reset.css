@@ -33,9 +33,9 @@ pre {
   font-size: 1em;
 }
 
-a {
+/* a {
   background-color: transparent;
-}
+} */
 
 abbr[title] {
   border-bottom: none;
@@ -208,8 +208,8 @@ html:focus-within {
   padding: 0;
 }
 
-ul[role="list"],
-ol[role="list"] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -250,4 +250,19 @@ select {
     scroll-behavior: auto !important;
     transition: none;
   }
+}
+
+/* my styles */
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  color: inherit;
 }
