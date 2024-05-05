@@ -18,6 +18,7 @@
   /* Fonts & Typography */
   --title: "League Spartan", Arial, Helvetica, sans-serif;
   --text: "Roboto", Arial, Helvetica, sans-serif;
+  --h2-font-size: 32px;
   --h3-font-size: 24px;
   /* Length values */
   --max-width: 1300px;
@@ -50,6 +51,14 @@ h4,
 h5,
 h6 {
   font-family: var(--title);
+}
+
+h2 {
+  text-align: center;
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  line-height: 1.5;
+  margin-block: var(--margin-bottom);
 }
 
 h3 {
@@ -284,7 +293,7 @@ h3 {
 .three-cards__section {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 24px;
 }
 
 .three__cards-card {
@@ -298,10 +307,36 @@ h3 {
   transition: transform var(--transition);
 }
 
-.card:hover{
+.card:hover {
   transform: translateY(-8px);
 }
 /* end three cards section */
+
+/* featured */
+.featured__section {
+  background-color: var(--dark-hard);
+  padding-block: var(--margin-bottom);
+}
+
+.featured__cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.featured__cards-card {
+  background-color: var(--dark-medium);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+
+.featured__cards-card:hover {
+  transform: translateY(-8px);
+}
+/* end featured */
 
 /* 
 ==============================
@@ -329,10 +364,20 @@ h3 {
   .three__cards-card {
     width: calc((100% - 20px) / 2);
   }
+
+  .featured__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .featured__cards-card {
+    width: calc((100% - 20px) / 2);
+  }
 }
 
 @media (min-width: 1000px) {
-  :root{
+  :root {
     --margin-bottom: 46px;
   }
 
@@ -417,5 +462,9 @@ h3 {
 
   .three__cards-card {
     width: calc((100% - 40px) / 3);
+  }
+
+  .featured__cards-card {
+    width: calc((100% - 60px) / 4);
   }
 }
