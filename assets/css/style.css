@@ -257,7 +257,7 @@ h3 {
   overflow: hidden;
 }
 
-.banner__card-txt {
+.card__txt {
   width: 100%;
   padding: 24px;
   display: flex;
@@ -280,6 +280,29 @@ h3 {
 }
 /* end banner section */
 
+/* three cards section */
+.three-cards__section {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.three__cards-card {
+  background-color: var(--dark-hard);
+}
+
+.card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+
+.card:hover{
+  transform: translateY(-8px);
+}
+/* end three cards section */
+
 /* 
 ==============================
   FOOTER
@@ -296,9 +319,23 @@ h3 {
     flex-direction: row;
     gap: 20px;
   }
+
+  .three-cards__section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .three__cards-card {
+    width: calc((100% - 20px) / 2);
+  }
 }
 
 @media (min-width: 1000px) {
+  :root{
+    --margin-bottom: 46px;
+  }
+
   .nav__list {
     display: block;
     width: 100%;
@@ -375,6 +412,10 @@ h3 {
   }
 
   .banner__card-small {
-    width: calc(100% / 3);
+    width: calc((100% - 40px) / 3);
+  }
+
+  .three__cards-card {
+    width: calc((100% - 40px) / 3);
   }
 }
