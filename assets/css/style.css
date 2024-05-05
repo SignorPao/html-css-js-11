@@ -14,14 +14,19 @@
   --dark-light: rgb(52, 63, 75);
   --gray: rgb(224, 224, 224);
   --yellow: rgb(214, 161, 0);
+  --overlay-bg: rgba(0, 0, 0, 0.5);
   /* Fonts & Typography */
   --title: "League Spartan", Arial, Helvetica, sans-serif;
   --text: "Roboto", Arial, Helvetica, sans-serif;
+  --h3-font-size: 24px;
   /* Length values */
   --max-width: 1300px;
   --padding-inline: 12px;
+  --margin-bottom: 36px;
   /* Other values */
   --transition: 250ms ease;
+  --radius: 16px;
+  --radius-small: 14px;
 }
 
 /* 
@@ -32,6 +37,8 @@
 body {
   font-family: var(--text);
   font-size: 100%;
+  font-weight: 300;
+  line-height: 1.65;
   color: var(--white);
   background-color: var(--dark-medium);
 }
@@ -45,6 +52,12 @@ h6 {
   font-family: var(--title);
 }
 
+h3 {
+  font-size: var(--h3-font-size);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
 /* 
 ==============================
   REUSABLE CLASSES
@@ -54,6 +67,12 @@ h6 {
   padding-inline: var(--padding-inline);
   margin-inline: auto;
   max-width: min(100%, var(--max-width));
+}
+
+.link {
+  font-size: initial;
+  font-weight: 400;
+  text-decoration: underline;
 }
 
 /* 
@@ -218,40 +237,46 @@ h6 {
 ==============================
 */
 .main {
-  /* width: 100%; */
-  /* height: 1000px; */
-  /* padding: 1rem; */
+  font-size: 0.9rem;
+}
+
+.main > * {
+  margin-block-start: var(--margin-bottom);
 }
 
 /* banner section */
-.banner__section {
-}
-
-.wrapper {
-}
-
 .banner__container {
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 36px;
 }
 
 .banner__card-big {
-}
-
-.banner__card-big__img {
+  border-radius: var(--radius) var(--radius) 0px 0px;
+  overflow: hidden;
 }
 
 .banner__card-txt {
-}
-
-.banner__card-big__txt {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .banner__card-small {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
 .banner__card-small__txt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--overlay-bg);
 }
 /* end banner section */
 
@@ -266,7 +291,14 @@ h6 {
   BREAKPOINTS
 ==============================
 */
-@media (min-width: 960px) {
+@media (min-width: 600px) {
+  .banner__container {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
   .nav__list {
     display: block;
     width: 100%;
@@ -301,7 +333,7 @@ h6 {
   }
 
   .nav__list li:first-child a {
-    transform: translateY(4px);
+    transform: translateY(3px);
   }
 
   .nav__buttons {
@@ -310,5 +342,39 @@ h6 {
 
   .nav__buttons-menu {
     display: none;
+  }
+
+  .banner__card-big {
+    width: calc((100% / 3) * 2);
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .banner__card-big__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner__card-big__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .banner__card-big__txt {
+    width: 35%;
+    height: fit-content;
+    position: absolute;
+    bottom: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 25%;
+    background-color: var(--overlay-bg);
+    border-radius: var(--radius-small);
+  }
+
+  .banner__card-small {
+    width: calc(100% / 3);
   }
 }
