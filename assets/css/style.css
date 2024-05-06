@@ -28,6 +28,7 @@
   --transition: 250ms ease;
   --radius: 16px;
   --radius-small: 14px;
+  --radius-smaller: 8px;
 }
 
 /* 
@@ -338,6 +339,39 @@ h3 {
 }
 /* end featured */
 
+/* help */
+.help__container {
+  background-color: var(--yellow);
+  padding: 24px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.help__button {
+  background-color: var(--dark-medium);
+  padding: 14px;
+  border-radius: var(--radius-smaller);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  color: var(--yellow);
+  border: 1px solid var(--dark-medium);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.help__button:hover {
+  background-color: var(--yellow);
+  color: var(--dark-medium);
+}
+
+.help__button-txt {
+  font-weight: 500;
+}
+/* end help */
+
 /* 
 ==============================
   FOOTER
@@ -408,6 +442,7 @@ h3 {
     height: 100%;
     display: flex;
     align-items: center;
+    font-weight: 500;
   }
 
   .nav__list li:first-child {
@@ -466,5 +501,14 @@ h3 {
 
   .featured__cards-card {
     width: calc((100% - 60px) / 4);
+  }
+
+  .help__container {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .help__button {
+    width: calc((100% - 40px) / 3);
   }
 }
