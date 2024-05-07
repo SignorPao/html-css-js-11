@@ -371,10 +371,65 @@ h3 {
   font-weight: 500;
 }
 
-.credit__card{
+.credit__card {
   transform: rotate(-30deg);
 }
 /* end help */
+
+/* news */
+.news__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news__four-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.news__small-card {
+  background-color: var(--dark-hard);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news__small-card h3 {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.news__small-card time {
+  font-size: 0.8rem;
+}
+
+.news__big-card {
+  background-color: var(--dark-hard);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.big__card-txt button {
+  background-color: var(--yellow);
+  color: var(--dark-hard);
+  width: fit-content;
+  padding: 14px;
+  border-radius: var(--radius-smaller);
+  font-weight: 500;
+  border: 1px solid var(--yellow);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.big__card-txt button:hover {
+  background-color: var(--dark-hard);
+  color: var(--yellow);
+}
+/* end news */
 
 /* 
 ==============================
@@ -410,6 +465,14 @@ h3 {
   }
 
   .featured__cards-card {
+    width: calc((100% - 20px) / 2);
+  }
+
+  .news__four-cards {
+    flex-direction: row;
+  }
+
+  .news__small-card {
     width: calc((100% - 20px) / 2);
   }
 }
@@ -514,5 +577,24 @@ h3 {
 
   .help__button {
     width: calc((100% - 40px) / 3);
+  }
+
+  .news__small-card {
+    width: calc((100% - 60px) / 4);
+  }
+
+  .news__big-card {
+    display: flex;
+    align-items: center;
+  }
+
+  .big__card-img {
+    order: 2;
+    width: 50%;
+  }
+
+  .big__card-txt {
+    order: 1;
+    width: 50%;
   }
 }
