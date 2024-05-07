@@ -370,6 +370,10 @@ h3 {
 .help__button-txt {
   font-weight: 500;
 }
+
+.credit__card{
+  transform: rotate(-30deg);
+}
 /* end help */
 
 /* 
