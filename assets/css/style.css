@@ -248,6 +248,7 @@ h3 {
 */
 .main {
   font-size: 0.9rem;
+  margin-block-end: var(--margin-bottom);
 }
 
 .main > * {
@@ -460,6 +461,73 @@ h3 {
   FOOTER
 ==============================
 */
+.footer {
+  border-block-start: 0.5px solid var(--dark-light);
+  padding-block: calc(var(--margin-bottom) * 2);
+  font-size: 0.8rem;
+}
+
+.footer__container {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: var(--margin-bottom);
+  padding-inline: calc(var(--padding-inline) * 3);
+}
+
+.footer__container h3 {
+  margin-block-end: 16px;
+}
+
+.footer__block-1 {
+  width: 100%;
+}
+
+.footer__block-2 {
+  width: 100%;
+}
+
+.footer__block-3 {
+  width: 100%;
+}
+
+.footer__block-3 li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer__block-3 svg {
+  cursor: pointer;
+}
+
+.footer__block-4 {
+  width: 100%;
+  font-size: 0.7rem;
+}
+
+.row__list {
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 24px;
+  column-gap: 20px;
+}
+
+.footer__block-5 {
+  width: 100%;
+  font-size: 0.7rem;
+}
+
+.column__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.column__list a:hover,
+.row__list a:hover,
+.footer__block-5 a:hover {
+  text-decoration: underline;
+}
 
 /* 
 ==============================
@@ -507,6 +575,30 @@ h3 {
 
   .six__cards-card {
     width: calc((100% - 20px) / 2);
+  }
+
+  .footer__container {
+    flex-direction: row;
+  }
+
+  .footer__block-1 {
+    width: 50%;
+  }
+
+  .footer__block-2 {
+    width: 50%;
+  }
+
+  .footer__block-3 {
+    width: 50%;
+  }
+
+  .footer__block-4 {
+    width: 50%;
+  }
+
+  .footer__block-5 {
+    width: 100%;
   }
 }
 
@@ -633,5 +725,25 @@ h3 {
 
   .six__cards-card {
     width: calc((100% - 40px) / 3);
+  }
+
+  .footer__container {
+    padding-inline: var(--padding-inline);
+    column-gap: 20px;
+  }
+
+  .footer__block-1,
+  .footer__block-2,
+  .footer__block-3 {
+    width: calc((100% - 40px) / 3);
+  }
+
+  .footer__block-4 {
+    width: 80%;
+  }
+
+  .footer__block-5 {
+    width: calc(20% - 20px);
+    text-align: right;
   }
 }
