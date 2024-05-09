@@ -529,6 +529,20 @@ h3 {
   text-decoration: underline;
 }
 
+.author {
+  width: 100%;
+  margin-block-start: var(--margin-bottom);
+}
+
+.author p {
+  display: flex;
+  justify-content: center;
+}
+
+.author a:hover {
+  text-decoration: underline;
+}
+
 /* 
 ==============================
   BREAKPOINTS

@@ -16,10 +16,16 @@ mobileMenuButton.addEventListener("click", () => {
 
 // logo handlers(remove mobile menu & burger btn styles)
 logo.addEventListener("click", () => {
-  console.log("logo");
   if (mobileMenuList.classList.contains("active")) {
     mobileMenuList.classList.remove("active");
     bar.forEach((i) => i.classList.remove("active"));
     mobileMenuButton.classList.remove("change-bg");
   }
 });
+
+// this year
+let timeContainer = document.querySelector(".author time"),
+  thisYear = new Date().getFullYear();
+if (thisYear > 2024) {
+  timeContainer.innerHTML = `2024 - ${thisYear}.`;
+}
