@@ -68,6 +68,23 @@ h3 {
   line-height: 1.1;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-hard);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-light);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--yellow);
+}
+
 /* 
 ==============================
   REUSABLE CLASSES
