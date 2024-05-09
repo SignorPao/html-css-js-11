@@ -542,6 +542,38 @@ h3 {
 .author a:hover {
   text-decoration: underline;
 }
+/* 
+==============================
+  SCROLL TO TOP BUTTON
+==============================
+*/
+.scroll-up {
+  display: none;
+  position: fixed;
+  right: 2rem;
+  width: 46px;
+  height: 46px;
+  bottom: -50%;
+  transition: bottom var(--transition), background-color var(--transition),
+    color var(--transition);
+  color: var(--white);
+  border: 1px solid var(--dark-light);
+  border-radius: var(--radius-smaller);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-medium);
+  will-change: transform;
+}
+
+.scroll-up:hover {
+  background-color: var(--gray);
+  color: var(--dark-hard);
+}
+
+.show-scroll {
+  bottom: 2rem;
+}
 
 /* 
 ==============================

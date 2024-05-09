@@ -29,3 +29,12 @@ let timeContainer = document.querySelector(".author time"),
 if (thisYear > 2024) {
   timeContainer.innerHTML = `2024 - ${thisYear}.`;
 }
+
+// scroll to top
+const scrollUp = () => {
+  const scrollUp = document.querySelector(".scroll-up");
+  this.scrollY >= 350
+    ? scrollUp.classList.add("show-scroll")
+    : scrollUp.classList.remove("show-scroll");
+};
+window.addEventListener("scroll", scrollUp);
